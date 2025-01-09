@@ -4,7 +4,7 @@ import tempfile
 import os
 
 # Set up Streamlit app
-st.title("Whisper MP4 Transcription")
+st.title("Step 1: Upload The Video You Want To Convert")
 
 # Load Whisper model
 @st.cache_resource
