@@ -23,9 +23,9 @@ def load_model():
 model = load_model()
 
 # Check if query parameters indicate a Zapier callback
-query_params = st.experimental_get_query_params()
+query_params = st.query_params
 if "variation" in query_params:
-    zapier_response = urllib.parse.unquote(query_params.get("variation")[0])
+    zapier_response = urllib.parse.unquote(query_params.get("variation", [""])[0])
     st.session_state.zapier_response = zapier_response
     st.experimental_set_query_params()  # Clear query params after processing
 
